@@ -655,4 +655,157 @@ loadScript()
     scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
   }
 }
+/* 手机布局适配：保留原有配色与卡片风格 */
+@media (max-width: 768px) {
+  .deltaForceData {
+    min-height: 100vh;
+    height: auto;
+    background-image: linear-gradient(to right, #9bb3c3, #9eb0ca);
+  }
+
+  .deltaForceData .ner .search {
+    height: 150px;
+    padding: 12px;
+  }
+
+  .deltaForceData .ner .search .tt {
+    top: 18px;
+    font-size: 21px;
+    text-align: center;
+  }
+
+  .deltaForceData .ner .search .line {
+    width: 100%;
+    max-width: 600px;
+    height: 46px;
+    padding-left: 12px;
+  }
+
+  .deltaForceData .ner .search .line input {
+    width: 100%;
+    min-width: 0;
+    padding-right: 80px;
+  }
+
+  .deltaForceData .ner .search .line .sbtn {
+    width: 68px;
+    height: 36px;
+    top: 5px;
+    right: 5px;
+  }
+
+  .deltaForceData .ner .searchContent {
+    display: block;
+    padding: 8px;
+  }
+
+  .deltaForceData .ner .searchContent .nav {
+    position: static;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    margin: 0 0 10px;
+    padding: 10px;
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border-radius: 10px;
+  }
+
+  .deltaForceData .ner .searchContent .nav > li {
+    flex: 0 0 auto;
+    min-width: max-content;
+  }
+
+  .deltaForceData .ner .searchContent .nav > li p {
+    padding: 0 8px;
+    height: 26px;
+    line-height: 26px;
+  }
+
+  .deltaForceData .ner .searchContent .nav .child {
+    display: flex;
+    gap: 5px;
+  }
+
+  .deltaForceData .ner .searchContent .nav .child li {
+    white-space: nowrap;
+    padding: 7px 10px;
+    margin: 0;
+  }
+
+  .deltaForceData .ner .searchContent .filters {
+    height: 44px;
+  }
+
+  .deltaForceData .ner .searchContent .objectList {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .deltaForceData .ner .searchContent .objectList > li {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .deltaForceData .ner .searchContent .objectList > li::before {
+    top: 125px;
+  }
+
+  .deltaForceData .ner .searchContent .objectList > li .image {
+    padding: 4px;
+    margin-bottom: 8px;
+  }
+
+  .deltaForceData .ner .searchContent .objectList > li .image img {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  .deltaForceData .ner .searchContent .objectList > li .info h3 {
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+  }
+
+  .deltaForceData .ner .searchContent .objectList > li .info p {
+    font-size: 12px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+  }
+
+  .deltaForceData .ner .searchContent .objectList > li .taglist {
+    gap: 4px;
+  }
+
+  .deltaForceData .ner .searchContent .objectList > li .tag {
+    font-size: 11px;
+    padding: 3px 6px;
+  }
+
+  .loadDtaa .sb {
+    width: calc(100% - 40px);
+    max-width: 400px;
+  }
+
+  .top {
+    width: 46px;
+    height: 46px;
+    right: 12px;
+    bottom: 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .deltaForceData .ner .searchContent .objectList {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 </style>
